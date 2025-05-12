@@ -1,0 +1,21 @@
+{% extends "index_app/base.html" %}
+
+{% block title %}
+{{ photo }}
+{% endblock %}
+
+
+{% block content %}
+    <form enctype="multipart/form-data" method="post" action="{% url 'index_app:photo' %}">
+        {% csrf_token %}
+        <p>
+            <label for="photo_name">name</label>
+            <input type="text" name="photo_name" id="photo_name">
+        </p>
+        <p>
+            <label for="photo">photo</label>
+            <input type="file" name="photo" id="photo">
+        </p>
+        <input type="submit" value="save">
+    </form>
+{% endblock %}

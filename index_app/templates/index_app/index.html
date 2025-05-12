@@ -1,0 +1,32 @@
+{% extends "index_app/base.html" %}
+
+{% block title %}
+index
+{% endblock %}
+
+
+{% block content %}
+
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">name</th>
+                <th scope="col">image</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for photo in photos %}            
+            <tr>
+                <th scope="row">{{ photo.name }}</th>
+                <td>
+                    <a href="{{ photo.url }}">
+                        <img src="{{ photo.url }}" width="50" height="50">
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}            
+        </tbody>
+        <tfoot>
+        </tfoot>
+    </table>    
+{% endblock %}
