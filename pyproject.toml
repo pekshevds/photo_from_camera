@@ -1,0 +1,18 @@
+[project]
+name = "photo-from-camera"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi[standard]>=0.115.12",
+    "opencv-python>=4.11.0.86",
+    "python-dotenv>=1.1.0",
+]
+
+[tool.mypy]
+igmore_missing_imports = true
+disallow_incomplete_defs = true
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+exclude = ["tests"]
